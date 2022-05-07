@@ -10,16 +10,16 @@ hasDuplicate = (arr) => {
 vowels = (char) => { return "aeiou".includes(char); }
   
 vowelCount = (str) => {
-    const vowelCount = new Map();
+    const vowelCounter = new Map();
     for(let char of str){
       let lowercase = char.toLowerCase();
       if(vowels(lowercase)){
-        if(vowelCount.has(lowercase)){
-          vowelCount.set(lowercase, vowelCount.get(lowercase) + 1);
+        if(vowelCounter.has(lowercase)){
+          vowelCounter.set(lowercase, vowelCounter.get(lowercase) + 1);
         } else {
-          vowelCount.set(lowercase, 1);
+          vowelCounter.set(lowercase, 1);
         }
       }
     }
-    return vowelCount;
+    return vowelCounter;
   }
